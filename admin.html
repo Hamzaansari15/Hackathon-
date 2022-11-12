@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/83cf4209f0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="admin.css">
 </head>
+
 <body>
 
-    <div id="admin_page">
-        <div id="admin_heading">
-            <p>Admin Dashboard</p>
+    <div id="body">
+        <div id="admin_page">
+            <div id="admin_heading">
+                <p>Admin Dashboard</p>
+            </div>
+            <div id="dashboard_item">
+                <ul id="dasboard_list">
+                    <li><button type="submit" id="show_class_btn">Show Class</button></li>
+                    <li><button type="submit" id="create_class_btn">Create Class</button></li>
+                    <li><button type="submit" id="add_student_btn">Add Student</button></li>
+                </ul>
+            </div>
+            <div id="all_class">
+                <div id="class_heading">
+                    <p>Classes:</p>
+                </div>
+                <div id="class_list">
+                    <!-- <ul>
+                        <li><span id="class_name_heading">WEb and mobile</span> <span class="italic">(Sir Ghous)</span>
+                        </li>
+                        <li><span class="list">schdule:</span><span class="italic"> (9am - 11am) Monday, Wednesday,
+                                Friday</span></li>
+                        <li><span class="list">Section: <span class="italic">A</span> </span></li>
+                        <li><span class="list">Batch: </span><span class="italic">08</span></li>
+                    </ul>
+                    <ul>
+                        <li><span id="class_name">WEb and mobile</span> <span class="italic">(Sir Ghous)</span></li>
+                        <li><span class="list">schdule:</span><span class="italic"> (9am - 11am) Monday, Wednesday,
+                                Friday</span></li>
+                        <li><span class="list">Section: <span class="italic">A</span> </span></li>
+                        <li><span class="list">Batch: </span><span class="italic">08</span></li>
+                    </ul>
+                    <ul>
+                        <li><span id="class_name">WEb and mobile</span> <span class="italic">(Sir Ghous)</span></li>
+                        <li><span class="list">schdule:</span><span class="italic"> (9am - 11am) Monday, Wednesday,
+                                Friday</span></li>
+                        <li><span class="list">Section: <span class="italic">A</span> </span></li>
+                        <li><span class="list">Batch: </span><span class="italic">08</span></li>
+                    </ul>
+                    <ul>
+                        <li><span id="class_name">WEb and mobile</span> <span class="italic">(Sir Ghous)</span></li>
+                        <li><span class="list">schdule:</span><span class="italic"> (9am - 11am) Monday, Wednesday,
+                                Friday</span></li>
+                        <li><span class="list">Section: <span class="italic">A</span> </span></li>
+                        <li><span class="list">Batch: </span><span class="italic">08</span></li>
+                    </ul> -->
+                </div>
+            </div>
         </div>
-        <div id="dashboard_item">
-            <ul id="dasboard_list">
-                <li><button id="create_class_btn" type="button">Create Class</button></li>
-                <li><button id="add_student_btn" type="button">Add Student</button></li>
-            </ul>
-        </div>
-        <div id="all_class">
-            <div id="class_heading"><p>Classes:</p></div>
-            <div id="class_list">
-                <ul>
-                    <li><span id="class_name">WEb and mobile</span> <span class="italic">(Sir Ghous)</span></li>
-                    <li><span class="list">schdule:</span><span class="italic"> (9am - 11am) Monday, Wednesday, Friday</span></li>
-                    <li><span class="list">Section: <span class="italic">A</span> </span></li>
-                    <li><span class="list">Batch: </span><span class="italic">08</span></li>
-                </ul>
-                <ul>
-                    <li><span id="class_name">WEb and mobile</span> <span class="italic">(Sir Ghous)</span></li>
-                    <li><span class="list">schdule:</span><span class="italic"> (9am - 11am) Monday, Wednesday, Friday</span></li>
-                    <li><span class="list">Section: <span class="italic">A</span> </span></li>
-                    <li><span class="list">Batch: </span><span class="italic">08</span></li>
-                </ul>
-                <ul>
-                    <li><span id="class_name">WEb and mobile</span> <span class="italic">(Sir Ghous)</span></li>
-                    <li><span class="list">schdule:</span><span class="italic"> (9am - 11am) Monday, Wednesday, Friday</span></li>
-                    <li><span class="list">Section: <span class="italic">A</span> </span></li>
-                    <li><span class="list">Batch: </span><span class="italic">08</span></li>
-                </ul>
+        <div id="create_class">
+        
+            <div id="class_form">
+                <i id="class_icon" class="fa-solid fa-xmark fa-xl"></i>
+                <div id="heading"><p>Create Class</p></div>
+                <input placeholder="course name" type="text" name="" id='course'><br>
+                <input placeholder="Class schedule" type="text" name="" id="schedule"><br>
+                <input placeholder="Enter teacher name" type="text" name="" id="teacher"><br>
+                <input placeholder="Section" type="text" name="" id="section"><br>
+                <input placeholder="Class timmimg" type="text" name="" id="class_timming"><br>
+                <input placeholder="Batch No." type="text" name="" id="batch_no"><br>
+                <div id="create_btn"><button id="btn" type="submit">Create</button><br></div>
             </div>
         </div>
     </div>
-    <div id="create_class">
-        <div id="class_form">
-            
+    <div id="add_student">
+        <div id="student_item">
+            <i id="student_icon" class="fa-solid fa-xmark fa-xl"></i>
+            <div id="student_heading">
+                <p>Add Student</p>
+            </div>
+            <input placeholder="Enter Student name" type="text" name="" id="student_name">
+            <input placeholder="Enter Father name" type="text" name="" id="student_father"><br>
+            <input placeholder="Enter RollNo." type="text" name="" id="student_rollno.">
+            <input placeholder="Enter Course name" type="text" name="" id="course_name"><br>
+            <input placeholder="Enter Contact number" type="number" name="" id="student_no.">
+            <input placeholder="Enter CNIC NO." type="number" name="" id="cnic_no"><br>
+            <div> <select name="" id="class">
+                <option value="">Sir ghous</option>
+                <option value="">Sir ghous</option>
+                <option value="">Sir ghous</option>
+                <option value="">Sir ghous</option>
+              </select>
+            <input id="studentImage" type="file" src="" alt="">
+            <div id="student_btn">
+                <button id="create_student" type="submit">Add Student</button>
+            </div>
+        </div>
         </div>
     </div>
 
 
 
-
-    <script src="admin.js"></script>
+    <script type="module" src="admin.js"></script>
 </body>
+
 </html>

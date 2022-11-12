@@ -9,13 +9,17 @@
 body{
     background-color: lightblue;
 }
+
 #admin_page{
     width: 100%;
     height: 100vh;
+    position: relative;
+    z-index: 10;
     
 }
 #admin_heading {
     background-color: #6570f3;
+    position: relative;
     width: 100%;
     height: 4.5em;
     display: flex;
@@ -32,25 +36,20 @@ body{
     word-spacing: 0.3em;
 }
 
-
-/*     ADMIN LOGIN             */
-
-
-
-
 #dashboard_item{
     position: relative;
     display: flex;
     justify-content: flex-end;
-    /* top: 2em; */
-    /* right: 4em; */
 }
 #dasboard_list{
     display: flex;
+   
 }
 #dasboard_list li {
     list-style: none;
     margin: 2em;
+    position: relative;
+    z-index: 10;
 }
 #dasboard_list button {
     width: fit-content;
@@ -64,10 +63,12 @@ body{
     color: white;
     letter-spacing: 1px;
 }
+#dasboard_list button:active{
+    opacity: 0.7;
+}
 #all_class {
     position: relative;
     top: -5.8em;
-    z-index: 10;
     margin-left: 3em;
 }#class_heading
 {
@@ -76,6 +77,7 @@ body{
     font-weight: 500;
     letter-spacing: 1px;
     font-style: italic;
+    
 }
 #class_list{
     position: relative;
@@ -88,7 +90,7 @@ body{
     list-style: none;
     /* margin: 1px; */
 }
-#class_name{
+#class_name_heading{
     font-size: 1.5em;
     font-weight: 500;
     text-transform: uppercase;
@@ -106,3 +108,189 @@ body{
 }
 
 /*                      Admin DASHBOARD */
+
+
+#create_class {
+    position: absolute;
+    top: 0em;
+    z-index: 10;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: none;
+}
+#heading{
+    display: flex;
+    position: relative;
+    top: 2em;
+    justify-content: center;
+    width: 50%;
+}
+#heading p{
+    font-size: 2em;
+    font-weight: 500;
+    color: #6570f3;
+}
+#class_form {
+    width: 40em;
+    height: 38em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#class_form input {
+    width: 80%;
+    height: 3em;
+    position: relative;
+    left: 5em;
+    top: 2em;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #7393B3;
+    font-size: 1em;
+    font-weight: 400;
+    color: black;
+
+}
+#class_form input::placeholder{
+    font-size: 1.1em;
+    font-weight: 400;
+    font-style: italic;
+}
+#class_form input:focus
+{
+    border-bottom: 2px solid #3944BC;
+
+}
+#create_btn{
+    display: flex;
+    justify-content: center;
+}
+#btn{
+    position: relative;
+    top: 2.5em;
+    width: 6em;
+    height: 2em;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 450;
+    letter-spacing: 1px;
+    background-color: #6570f3;
+    border: none;
+    border-radius: 6px;
+}
+#btn:active{
+    opacity: 0.7;
+}
+
+
+/*                         ADD STUDENT          */
+
+
+
+
+#student_heading{
+    display: flex;
+    position: relative;
+    top: 1.5em;
+    justify-content: center;
+}
+#student_heading p{
+    font-size: 2em;
+    font-weight: 500;
+    color: #6570f3;
+}
+#add_student{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: transparent;
+}
+#student_item{
+    width: 50em;
+    height: 30em;
+    background-color: white;
+    border-radius: 0.8em;
+}
+#student_item input{
+    width: 18em;
+    position: relative;
+    left: 6em;
+    top: 1.5em;
+    margin: 10px;
+    height: 3em;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #7393B3;
+    font-size: 1em;
+    font-weight: 400;
+    color: black;
+}
+#student_item select{
+    width: 18em;
+    position: relative;
+    left: 6.5em;
+    top: 2em;
+    margin-top: 10px;
+    margin-right: 20px;
+    height: 3em;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #7393B3;
+    font-size: 1em;
+    font-weight: 400;
+    color: black;
+}
+#student_btn {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 3em;
+
+}
+#student_btn button {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 450;
+    background-color: #6570f3;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+#student_btn button:active{
+    opacity: 0.7;
+}
+#student_icon,#class_icon {
+    position: relative;
+    left: 95%;
+    top: 1em;
+}
+
+#student_item input::placeholder{
+    font-size: 1.1em;
+    font-weight: 400;
+    font-style: italic;
+}
+#student_item  input:focus
+{
+    border-bottom: 2px solid #3944BC;
+
+}
