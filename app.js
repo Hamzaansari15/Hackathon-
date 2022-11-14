@@ -9,13 +9,6 @@ import {
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBk0z-HnPdl8DceZjh6DGjyIJsjmG0tv-4",
-    authDomain: "quiz-app-8dfe7.firebaseapp.com",
-    projectId: "quiz-app-8dfe7",
-    storageBucket: "quiz-app-8dfe7.appspot.com",
-    messagingSenderId: "121004155127",
-    appId: "1:121004155127:web:26094c43a964f4dc3833f2",
-    measurementId: "G-BYY18EWFXE"
 };
 
 
