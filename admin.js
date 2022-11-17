@@ -8,7 +8,14 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase
 // Initialize Cloud Firestore and get a reference to the service
 
 const firebaseConfig = {
-};
+    apiKey: "AIzaSyBk0z-HnPdl8DceZjh6DGjyIJsjmG0tv-4",
+    authDomain: "quiz-app-8dfe7.firebaseapp.com",
+    projectId: "quiz-app-8dfe7",
+    storageBucket: "quiz-app-8dfe7.appspot.com",
+    messagingSenderId: "121004155127",
+    appId: "1:121004155127:web:26094c43a964f4dc3833f2",
+    measurementId: "G-BYY18EWFXE"
+  };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -25,7 +32,7 @@ createClass.addEventListener('click', () => {
         classDiv.style.display = 'none';
     })
         let createClass = document.getElementById('create_btn');
-        createClass.addEventListener('click', async() => {
+        createClass.addEventListener('click',async () => {
         let course = document.getElementById('course').value
         let schedule = document.getElementById('schedule').value
         let teacher = document.getElementById('teacher').value
@@ -44,49 +51,39 @@ createClass.addEventListener('click', () => {
            // id: uid
            // profile:url
        
-         });
+         }).then( () => {
+            window.location.reload()
+        })
         })
         
+       
     })
-    let showClass = document.getElementById('show_class_btn')
-    showClass.addEventListener('click', async() => {
-        const querySnapshot = await getDocs(collection(db,"classes"));
-        querySnapshot.forEach((doc) => {
-            console.log(doc.data())
-            let hamza = ` <ul>
-            <li><span id="class_name_heading">${doc.data().course}</span> <span class="italic">${doc.data().teacher}</span>
-            </li>
-            <li><span class="list">Schedule:</span><span class="italic>${doc.data().schedule}</span></li>
-            <li><span class="list">Section: <span class="italic">${doc.data().section}</span> </span></li>
-            <li><span class="list">Batch: </span><span class="italic">${doc.data().batch}</span></li>
-        </ul>`
-        let allClass = document.getElementById('class_list')
-        allClass.innerHTML += hamza
-        })
-    })
+    // let showClass = document.getElementById('show_class_btn')
+    // showClass.addEventListener('click', async() => {
+    // })
 // const querySnapshot = await getDocs(collection(db,"classes"));
 //     querySnapshot.forEach((doc) => {
 //         console.log(doc.data())
 //     })
-addStudent.addEventListener('click', () => {
-    let studentDiv = document.getElementById("add_student");
-    studentDiv.style.display = 'flex';
-    console.log("hamza");
-    let cancelClass = document.getElementById('student_icon')
-    cancelClass.addEventListener('click', () => {
-        studentDiv.style.display = 'none'
-    })
-    let addStudent = document.getElementById('create_student')
-    console.log(addStudent)
-    addStudent.addEventListener('click' , () => {
-        let studentName = document.getElementById('student_name').value;
-        let fatherName = document.getElementById('student_father').value;
-        let rollNo = document.getElementById('student_rollno.').value;
-        let courseName = document.getElementById('course_name').value;
-        let phoneNo = document.getElementById('student_no.').value;
-        let cnicNo = document.getElementById('cnic_no').value;
-        // let className = document.getElementById('student_cnic_no').value;
-        // let studentImage = document.getElementById('studentImage').file;
-        console.log(studentName,fatherName,rollNo)
-    })
-})
+// addStudent.addEventListener('click', () => {
+//     let studentDiv = document.getElementById("add_student");
+//     studentDiv.style.display = 'flex';
+//     console.log("hamza");
+//     let cancelClass = document.getElementById('student_icon')
+//     cancelClass.addEventListener('click', () => {
+//         studentDiv.style.display = 'none'
+//     })
+//     let addStudent = document.getElementById('create_student')
+//     console.log(addStudent)
+//     addStudent.addEventListener('click' , () => {
+//         let studentName = document.getElementById('student_name').value;
+//         let fatherName = document.getElementById('student_father').value;
+//         let rollNo = document.getElementById('student_rollno.').value;
+//         let courseName = document.getElementById('course_name').value;
+//         let phoneNo = document.getElementById('student_no.').value;
+//         let cnicNo = document.getElementById('cnic_no').value;
+//         // let className = document.getElementById('student_cnic_no').value;
+//         // let studentImage = document.getElementById('studentImage').file;
+//         console.log(studentName,fatherName,rollNo)
+//     })
+// })
